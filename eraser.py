@@ -17,12 +17,17 @@ async def on_message(message):
         return
 
     # ignore messages from the bot itself
-    if message.author.id != ERASER_CLIENT.application_id:
+    if message.author.id != ERASER_CLIENT.user.id:
         content = message.content
+        if not content:
+            return
+
         command, *args = content.split()
 
         if command in commands.COMMANDS:
-            # always delete command messages first
-            await message.delete()
-            await commands.COMMANDS[command](message, *args)
-        
+            try:
+                # always delete command messages first
+                await message.delete()
+                await commands.COMMANDS[command](message, *args)
+            except:
+                pass
