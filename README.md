@@ -5,10 +5,10 @@
 pip install discord==1.7.3
 ```
 
-Also, three `.txt` files named `tokens.txt`, `admins.txt`, `channels.txt` have to be manually added.
-* `tokens.txt` Bot token
-* `admins.txt` ID of admin users who can use `.?`(purge) command (at each line)
-* `channels.txt` ID of text channels for the bot to be activated (at each line)
+Also, three `.txt` files named `token.txt`, `admins.txt`, `channels.txt` have to be manually added.
+* `token.txt` Bot token
+* `admins.txt` IDs of admin users who can use `.?`(purge) command (at each line)
+* `channels.txt` IDs of text channels for the bot to be activated (at each line)
 
 ## 2. Usage
 ```
