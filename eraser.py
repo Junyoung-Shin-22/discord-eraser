@@ -35,6 +35,7 @@ async def on_message(message):
                 pass
     
     # any message in listening channels should be deleted
+    
     await asyncio.sleep(3600)
     try:
         await message.delete()
