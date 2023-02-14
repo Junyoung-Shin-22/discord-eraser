@@ -2,6 +2,8 @@ import discord
 import commands
 import utils
 
+import asyncio
+
 _ALL_INTENTS = discord.Intents.all()
 ERASER_CLIENT = discord.Client(intents=_ALL_INTENTS)
 
@@ -31,3 +33,10 @@ async def on_message(message):
                 await commands.COMMANDS[command](message, *args)
             except:
                 pass
+    
+    # any message in listening channels should be deleted
+    await asyncio.sleep(3600)
+    try:
+        await message.delete()
+    except:
+        pass
