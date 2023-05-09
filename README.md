@@ -12,7 +12,7 @@ Also, three `.txt` files named `token.txt`, `admins.txt`, `channels.txt` have to
 
 ## 2. Usage
 ```
-$ nohup python run.py &
+$ . run.sh
 ```
 
 ## 3. bot commands
