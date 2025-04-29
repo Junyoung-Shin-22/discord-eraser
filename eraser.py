@@ -27,7 +27,8 @@ async def on_message(message):
         try:
             # always delete command messages first
             await message.delete()
-            await commands.COMMANDS[command](message, *args)
+            if not message.author.bot:
+                await commands.COMMANDS[command](message, *args)
         except:
             pass
     else: # any message in listening channels should be deleted

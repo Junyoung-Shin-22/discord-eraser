@@ -28,7 +28,7 @@ async def _delete_all(original_message, *args):
     for i in range(0, len(messages), 100):
         await channel.delete_messages(messages[i: i+100])
 
-@utils._check_admin
+# @utils._check_admin
 async def _purge(original_message, *args):
     if args:
         return
